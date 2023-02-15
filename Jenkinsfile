@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building code...'
+                sh 'make -C main'
                 sh 'chmod +x compile_script.sh'
                 sh './compile_script.sh'
             }
